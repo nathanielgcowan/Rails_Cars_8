@@ -1,0 +1,6 @@
+<% if current_user == @car.user %>
+    <%= link_to 'Edit', edit_car_path(@car) %>
+    <td><%= link_to 'Delete', car_path(@car),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+<% end %>
