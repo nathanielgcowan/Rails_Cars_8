@@ -1,0 +1,28 @@
+<%= form_for @car  do |f| %>
+    <% if @car.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <%= pluralize(@car.errors.count, "error") %>
+                prohibited this post from being saved:
+            </h2>
+        
+            <ul>
+                <% @car.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%# Form to fill out %>
+    <%= f.label :make %>
+    <%= f.text_field :make, placeholder: "ex. Ford" %><br>
+    </div>
+    <%= f.label :model %>
+    <%= f.text_field :model, placeholder: "ex. Focus" %><br>
+    <%= f.label :year %>
+    <%= f.number_field :year, placeholder: " And year from 1900 - 2021" %><br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, placeholder: "From 1(lowest) to 5(highest)" %><br>
+    <%= f.collection_select :vehicle_name, Vehicle.all, :name, :name %>
+    <%= f.submit %>
+<% end %>
