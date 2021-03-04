@@ -70,7 +70,8 @@ Specs:
         * /cars/10/parts/new
 - [x] Include form display of validation errors (form URL e.g. /recipes/new)
         * Car and Part have this
-                * <% if @car.errors.any? %>
+        ```
+            <% if @car.errors.any? %>
                         * <div id="error_explanation">
                         <h2>
                                 <%= pluralize(@car.errors.count, "error") %>
@@ -84,6 +85,7 @@ Specs:
                         </ul>
                         </div>
                 <% end %>
+        ```
         * User is Devise
         * I took out the new vehicle route to prevent invalid data.
 Confirm:
