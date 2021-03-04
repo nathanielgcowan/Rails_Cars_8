@@ -1,0 +1,10 @@
+<%= form_for([@car, @part]) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <br />
+    <%= f.label :rating %>
+    <%= f.number_field :rating %><br>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :car_id %>
+    <%= f.submit %>
+<% end %>
