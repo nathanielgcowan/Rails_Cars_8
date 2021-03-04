@@ -1,0 +1,5 @@
+<% @best_trucks.each do |car| %>
+    <tr>
+        <li><%= link_to car.make, car_path(car) %> | <%= car.year %> | <%= car.model %> | <%= car.rating %> | <%= car.vehicle_name %></li>
+    </tr>
+<% end %>
