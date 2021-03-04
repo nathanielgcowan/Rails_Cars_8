@@ -1,0 +1,5 @@
+<% @good_old_cars.each do |car| %>
+    <tr>
+        <li><%= link_to car.make, car_path(car) %> | <%= car.year %> | <%= car.model %> | <%= car.rating %></li>
+    </tr>
+<% end %>
