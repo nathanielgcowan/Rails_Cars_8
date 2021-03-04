@@ -1,0 +1,4 @@
+<%= link_to "All Car Parts", car_parts_path(@car) %><br>
+<% if user_signed_in? %>
+    <%= link_to "Add a Part", new_car_part_path(@car) %><br>
+<% end %>
