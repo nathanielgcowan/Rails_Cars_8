@@ -10,11 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_045400) do
+ActiveRecord::Schema.define(version: 2021_03_04_062105) do
 
   create_table "cars", force: :cascade do |t|
     t.string "make"
     t.string "model"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "rating"
+    t.integer "year"
+    t.integer "vehicle_id"
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.integer "car_id"
+    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,6 +53,12 @@ ActiveRecord::Schema.define(version: 2021_03_04_045400) do
     t.string "uid", limit: 500, default: "", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :vehicles
+  resources :parts
   root 'cars#index'
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
   
