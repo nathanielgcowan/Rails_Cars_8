@@ -36,13 +36,13 @@ class Car < ApplicationRecord
         where("year < 1996 ")
     end
     def self.car
-        where("vehicle_id == 6")
+        where("vehicle_id == 1")
     end
     def self.van
-        where("vehicle_id == 7")
+        where("vehicle_id == 3")
     end
     def self.truck
-        where("vehicle_id == 8")
+        where("vehicle_id == 2")
     end
 
     # Display Vehicle Name
