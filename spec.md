@@ -72,18 +72,7 @@ Specs:
         * Car and Part have this
         ```
             <% if @car.errors.any? %>
-                        * <div id="error_explanation">
-                        <h2>
-                                <%= pluralize(@car.errors.count, "error") %>
-                                prohibited this post from being saved:
-                        </h2>
-                        
-                        <ul>
-                                <% @car.errors.full_messages.each do |msg| %>
-                                <li><%= msg %></li>
-                                <% end %>
-                        </ul>
-                        </div>
+            ...
                 <% end %>
         ```
         * User is Devise
