@@ -1,0 +1,5 @@
+<% @parts.each do |part| %>
+    <div>
+        <h4><%= link_to part.name, part_path(part)%></h4>
+    </div>
+<% end %>
