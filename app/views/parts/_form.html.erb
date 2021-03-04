@@ -1,0 +1,26 @@
+<%= form_for [@car, @part] do |f| %>
+    <% if @part.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <%= pluralize(@part.errors.count, "error") %>
+                prohibited this post from being saved:
+            </h2>
+
+            <ul>
+                <% @part.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "ex. Wheel" %><br>
+    <br />
+    <%= f.label :rating %>
+    <%= f.number_field :rating, placeholder: "1-5 (lowest to highest)" %><br>
+    <br />
+    <%= f.hidden_field :car_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit %>
+<% end %>
