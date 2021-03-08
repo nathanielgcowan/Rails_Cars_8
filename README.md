@@ -19,7 +19,7 @@ We hope you are excited to use them gem. Follow the below steps to get this inst
 
 In terminal
 1. Open Terminal.
-    ```git clone https://github.com/nathanielgcowan/Rails_Cars_8.git```
+    ```git clone https://github.com/nathanielgcowan/Rails_Cars_8```
 
 3. ```cd Rails_Cars_8```
 
