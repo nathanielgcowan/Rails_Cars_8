@@ -19,9 +19,9 @@ We hope you are excited to use them gem. Follow the below steps to get this inst
 
 In terminal
 1. Open Terminal.
-    ```git clone https://github.com/nathanielgcowan/Rails_Cars_7.git```
+    ```git clone https://github.com/nathanielgcowan/Rails_Cars_8.git```
 
-3. ```cd Rails_Cars_7```
+3. ```cd Rails_Cars_8```
 
 5. Open your editor of choice and you are ready to go!
 
